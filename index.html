@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <LINK href="css/estilos.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/metodo.js"></script>
+   
+    <title>Punto De Función</title>
+
+</head>
+<body align="center">    
+
+        <div class="caja" align="center" >Bienvenidos/as antes que nada por si eres nuevo y aún te cuesta entender un poco el 
+            Método de Punto de Función aquí comparto un enlace donde pueden documentarse más.  
+            <a href="http://www.pmoinformatica.com/2015/04/estimacion-puntos-funcion-introduccion.html"> Visitar Página</a></div>
+    
+        
+        <h2 >Identificación de Componentes</h2>
+        <h3> Entradas Externas <input id="inputtext1" type="text" style="width : 40px; heigth : 1px"  onkeypress=" return solonumeros(event)" onpaste="return false"></h3>
+        <h3> Salidas Externas <input id="inputtext2" type="text" style="width : 40px; heigth : 1px"  onkeypress=" return solonumeros(event)" onpaste="return false" ></h3>
+        <h3>Consultas Externas <input id="inputtext3" type="text" style="width : 40px; heigth : 1px"  onkeypress=" return solonumeros(event)" onpaste="return false"> </h3>
+        <h3>Archivos Logicos Internos <input type="text" id="inputtext4" style="width : 40px; heigth : 1px"  onkeypress=" return solonumeros(event)" onpaste="return false"></h3>
+        <h3>Archivos de Interfez Externa <input id="inputtext5" type="text" style="width : 40px; heigth : 1px"   onkeypress=" return solonumeros(event)" onpaste="return false" > </h3>
+    
+        <input type="button"  id="guardartext"   onclick="enviardatos()" onclick=" return solonumeros(event)"  value="Enviar!" >
+        
+         <h2>Conteo de Complejidad</h2>
+        <table class="colapsado"  align="center" >
+            <tr bgcolor="3383FF" >
+                <td>Valor del dominio 
+                    <br>de Información</td> 
+                <td> Conteo 
+                    <br>Total</td>
+                <td> Simple</td>
+                <td> Media </td>
+                <td> Alta</td>
+                <td> Total</td>
+            </tr>
+            <tr>
+                <td> Entradas Externas</td> 
+                <td> <input type="text"  id="inputrecibir1" style="width : 40px; heigth : 1px" readonly=" readonly" ></td>
+                <td> 3  <input id="simple1" type="ntext"  onkeypress=" return solonumeros(event)" onpaste="return false" style="width : 20px; heigth : 1px"></td>
+                <td> 4  <input id="media1" type="text" onkeypress=" return solonumeros(event)" onpaste="return false" style="width : 20px; heigth : 1px"></td>
+                <td> 6  <input id="alta1" type="text" onkeypress=" return solonumeros(event)" onpaste="return false" style="width : 20px; heigth : 1px"></td>
+                <td> <input id= "total1" type="text"readonly=" readonly" style="width : 20px; heigth : 1px"> </td>
+            </tr>
+            <tr>
+                <td> Salidas Externas</td> 
+                <td> <input type="text"  id="inputrecibir2" style="width : 40px; heigth : 1px" readonly=" readonly" > </td>
+                <td> 4  <input id="simple2" type="text" onkeypress=" return solonumeros(event)" onpaste="return false" style="width : 20px; heigth : 1px"></td>
+                <td> 5  <input id="media2" type="text" onkeypress=" return solonumeros(event)" onpaste="return false" style="width : 20px; heigth : 1px"></td>
+                <td> 7  <input id="alta2" type="text" onkeypress=" return solonumeros(event)" onpaste="return false" style="width : 20px; heigth : 1px"></td>
+                <td> <input id= "total2" type="text"readonly=" readonly" style="width : 20px; heigth : 1px"></td>
+            </tr>
+            <tr>
+                <td> Consultas Externas</td> 
+                <td> <input type="text"  id="inputrecibir3" style="width : 40px; heigth : 1px" readonly=" readonly" ></td>
+                <td> 3   <input id="simple3" type="text" onkeypress=" return solonumeros(event)" onpaste="return false" style="width : 20px; heigth : 1px"></td>
+                <td> 4   <input id="media3" type="text" onkeypress=" return solonumeros(event)" onpaste="return false" style="width : 20px; heigth : 1px"></td>
+                <td> 6   <input id="alta3" type="text" onkeypress=" return solonumeros(event)" onpaste="return false" style="width : 20px; heigth : 1px"></td>
+                <td> <input id= "total3" type="text"readonly=" readonly" style="width : 20px; heigth : 1px"> </td>
+            </tr>
+            <tr align="center">
+                <td> Archivos Logicos Internos</td> 
+                <td> <input type="text"  id="inputrecibir4" style="width : 40px; heigth : 1px" readonly=" readonly" ></td>
+                <td> 7  <input id="simple4" type="text" onkeypress=" return solonumeros(event)" onpaste="return false" style="width : 20px; heigth : 1px"></td>
+                <td> 10<input id="media4" type="text" onkeypress=" return solonumeros(event)" onpaste="return false" style="width : 20px; heigth : 1px"></td>
+                <td> 15 <input id="alta4" type="text" onkeypress=" return solonumeros(event)" onpaste="return false" style="width : 20px; heigth : 1px"></td>
+                <td> <input id= "total4" type="text"readonly=" readonly" style="width : 20px; heigth : 1px"> </td>
+            </tr>
+            <tr al>
+                <td> Archivos de Interfez Externa</td> 
+                <td> <input type="text"  id="inputrecibir5" style="width : 40px; heigth : 1px" readonly=" readonly" > </td>
+                <td> 5 <input id="simple5" type="text" onkeypress=" return solonumeros(event)" onpaste="return false" style="width : 20px; heigth : 1px"></td>
+                <td> 7 <input id="media5" type="text" onkeypress=" return solonumeros(event)" onpaste="return false" style="width : 20px; heigth : 1px"></td>
+                <td> 10 <input id="alta5" type="text" onkeypress=" return solonumeros(event)" onpaste="return false" style="width : 20px; heigth : 1px"></td>
+                <td> <input id= "total5" type="text"readonly=" readonly" style="width : 20px; heigth : 1px"> </td>
+            </tr>
+            <tr>
+                <td> Conteo Total</td> 
+                <td>  </td>
+                <td>   </td>
+                <td>  </td>
+                <td>  </td>
+                <td bgcolor="3383FF"> <input id= "conteototal"   type="text"readonly=" readonly" style="width : 45px; heigth : 1px"> </td>
+            </tr>
+            
+            
+        </table> 
+        <br>
+        <input type="button"  id="calcular"  onclick="calculo()"   value="Guardar" > <br> <br> <a href="index2.html">  Ayuda</a>
+
+        <br>
+        <!--<p> UFC= <input type="text" id="pasar" readonly=" readonly" style="width : 35px; heigth : 1px"></label> </p>-->
+        <h2>Factores de Ajuste de Valor</h2>
+        <table align="center" class="colapsado"  border="1" >
+            <tr bgcolor="3383FF " > 
+                <td> N° </td>
+                <td> Factor </td>
+                <td> Valor </td>
+            </tr>
+            <tr  > 
+                <td> 1 </td>
+                <td>Respaldo de recuperación</td>
+                <td> <input  id="num1" type="number" min="0" max="5" style="width : 40px; heigth : 1px" onpaste="return false">  </td>
+            </tr>
+            <tr  > 
+                <td> 2 </td>
+                <td>Comunicaciones de datos </td>
+                <td> <input  id="num2" type="number" min="0" max="5" style="width : 40px; heigth : 1px" onpaste="return false">  </td>
+            </tr>
+            <tr>
+                <td> 3 </td>
+                <td> Prosesamiento distribuido </td>
+                <td> <input  id="num3" type="number" min="0" max="5" style="width : 40px; heigth : 1px" onpaste="return false">  </td>
+            </tr>
+            <tr>
+                <td> 4 </td>
+                <td> Rendimiento crítico</td>
+                <td> <input  id="num4" type="number" min="0" max="5" style="width : 40px; heigth : 1px" onpaste="return false">  </td>
+            </tr>
+            <tr>
+                <td> 5 </td>
+                <td> Existencia del entorno operativo</td>
+                <td> <input  id="num5" type="number" min="0" max="5" style="width : 40px; heigth : 1px" onpaste="return false">  </td>
+            </tr> 
+            <tr>         
+                <td> 6 </td>
+                <td> Entrada de datos en línea </td>
+                <td> <input  id="num6" type="number" min="0" max="5" style="width : 40px; heigth : 1px" onpaste="return false">  </td>
+            </tr>
+            <tr>
+                <td> 7 </td>
+                <td> Transacción de entrada sobre múltiples pantallas</td>
+                <td> <input  id="num7" type="number" min="0" max="5" style="width : 40px; heigth : 1px" onpaste="return false">  </td>
+            </tr>
+            <tr>
+                <td>  8</td>
+                <td> Archivos maestros actualizados en línea</td>
+                <td> <input  id="num8" type="number" min="0" max="5" style="width : 40px; heigth : 1px" onpaste="return false">  </td>
+            </tr>  
+            <tr>
+               <td>  9  </td>
+                <td> Complejo de valores de dominio de información</td>
+                <td> <input  id="num9" type="number" min="0" max="5" style="width : 40px; heigth : 1px" onpaste="return false">  </td>
+            </tr>
+            <tr>
+                <td> 10 </td>
+                <td> Complejo de procesamiento interno</td>
+                <td> <input  id="num10" type="number" min="0" max="5" style="width : 40px; heigth : 1px" onpaste="return false">  </td>
+            </tr>
+            <tr>
+                <td> 11 </td>
+                <td> Codigó diseñado para reuso</td>
+                <td> <input  id="num11" type="number" min="0" max="5" style="width : 40px; heigth : 1px" onpaste="return false">  </td>
+            </tr>
+            <tr>
+            <tr>
+                <td> 12 </td>
+                <td> Conversión/instalacación en diseño</td>
+                <td> <input  id="num12" type="number" min="0" max="5" style="width : 40px; heigth : 1px" onpaste="return false">  </td>
+            </tr>
+            <tr>
+                <td> 13 </td>
+                <td> Instalaciones multiples</td>
+                <td> <input  id="num13" type="number" min="0" max="5" style="width : 40px; heigth : 1px" onpaste="return false">  </td>
+            </tr>
+            <tr>
+                <td>14  </td>
+                <td> Aplicación diseñada para cambio</td>
+                <td> <input  id="num14" type="number" min="0" max="5" style="width : 40px; heigth : 1px" onpaste="return false">  </td>
+            </tr>
+            <tr>   
+                <td colspan="2">TOTAL </td>
+                
+                <td bgcolor="3383FF" > <input  id= "total"  type="text" readonly=" readonly" style="width : 35px; heigth : 1px">  </td>
+            </tr>
+        </table> 
+        <br>
+        <input type="button"  id="calcula"  onclick="ajuste()"   value="Calcular" >
+        <br>
+        <p> UFC= <input type="text" class="redondeado"id="pasar1" readonly=" readonly" style="width : 45px; heigth : 1px"> </p>
+        <p> FAV= <input type="text"  class="redondeado"  id="pasar" readonly=" readonly" style="width : 45px; heigth : 1px"></p>
+
+        <P>Para calcular el Punto de Función Ajustado(PFA), se aplica la siguiente fórmula:</P>
+            <p> PFA= UFC*(0.65+0.01*FAV)</p>
+        
+        <h3>PFA= <input type="text" id="punto" onpaste="return false" class="redondeado" readonly=" readonly" onpaste="return false" style="width : 45px; heigth : 1px"> 
+        </h3>
+         <br>
+        <h1> ESTIMACION DE ESFUERZO </h1>
+
+        <h2>Cálculo promedio Horas Persona </h2>
+        
+        <h3>Seleccione el Número de Desarrolladores <input type="number" class="redondeado" min="1" max="20"  id="desarrolladores" onpaste="return false" style="width : 35px; heigth : 1px" onkeypress=" return solonumeros(event)"> <input type="button" onclick="hhombre()" value="Siguiente" id="horas" ></h2>
+        
+        <p> Con una jornada laboral de 8 horas, establecido por la IFPUG para el desarrollo con lenguajes de 4ta generación</p>
+            <p>Horas/Persona= PFA*8</p>
+        <h3>Horas persona para realizar el desarrollo del proyecto son:
+            <input type="text" id="hombre"  readonly=" readonly" class="redondeado" onpaste="return false" style="width : 45px; heigth : 1px value " id="horas" style="width : 35px; heigth : 1px" onkeypress=" return solonumeros(event)">
+        </h3>
+        <p>Tomando en cuenta el número de desarrolladores asignados al proyecto tenemos: </p>
+        <p> = Horas Persona/Numero de desarrolladores</p>
+        <h3>Duración del proyecto en horas en base al número de desarrolladores:
+            <input type="text" id="promedio_desarrolladores" class="redondeado"readonly=" readonly"  onpaste="return false" style="width : 45px; heigth : 1px value " id="horas" style="width : 35px; heigth : 1px" onkeypress=" return solonumeros(event)">
+        </h3>
+        <p> <b>Nota:</b>  Se calculan 60 horas <b>productivas </b> de las 80 horas de media jornada laboral en 20 días hábiles.</p>
+         <p> Duración del proyecto mes/meses= Duración del proyecto en horas/60 horas</p>
+        <h3>Duración del proyecto mes/meses :
+            <input type="text" id="promedio_meses" class="redondeado" onpaste="return false"readonly=" readonly"  style="width : 45px; heigth : 1px value " id="horas" style="width : 35px; heigth : 1px"  > 
+            
+        </h3>
+
+
+
+    </body>
+</html>
+
+

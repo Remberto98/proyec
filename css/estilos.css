@@ -1,0 +1,46 @@
+table.separado{
+    border-collapse: separate;
+}
+table.colapsado{
+    border-collapse: collapse;
+}
+.redondeado {
+    border-radius: 10px;
+  }
+.caja { 
+ font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+
+font-size: 18px; 
+font-weight: 40; 
+text-align: center; 
+background: #59A7F2; 
+margin: 0 0 25px; 
+
+overflow: hidden; 
+padding: 20px; 
+border-radius: 35px 0px 35px 0px; 
+-moz-border-radius: 35px 0px 35px 0px; 
+-webkit-border-radius: 35px 0px 35px 0px; 
+border: 2px solid #030303;
+}
+
+
+#contenedor{
+
+    width: 950 px;
+    margin: auto;
+}
+
+header nav{
+    text-align: center;
+    background-color: sandybrown;
+    
+}
+section{
+
+    width: 1000px;
+    height: 550px;
+    margin-top: 4px;
+    background-color: red;
+    float: left;
+}
